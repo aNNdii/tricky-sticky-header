@@ -12,6 +12,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-instantsearch-hooks-web": "^6.47.2",
+    "react-virtualized": "^9.22.5",
     "tslib": "^2.3.0"
   },
   "devDependencies": {
@@ -28,6 +29,7 @@
     "@types/node": "18.14.2",
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",
+    "@types/react-virtualized": "^9.21.27",
     "@typescript-eslint/eslint-plugin": "5.62.0",
     "@typescript-eslint/parser": "5.62.0",
     "autoprefixer": "10.4.13",

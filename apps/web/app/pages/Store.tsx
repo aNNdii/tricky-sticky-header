@@ -1,33 +1,17 @@
 'use client';
 
-import { Breadcrumb } from 'react-instantsearch-hooks-web';
-
 import { Hit } from '../components/Hit';
 import { Header } from '../components/Header';
 
 import { InfiniteHits } from '../components/InfiniteHits';
 import { InstantSearch } from '../components/InstantSearch';
-import { ProductActions } from '../components/ProductActions';
 
 export function Store() {
   return (
     <InstantSearch>
       <div className="max-w-6xl mx-auto mb-10">
+
         <Header></Header>
-
-        <div className="sticky top-0 z-10 flex items-center justify-between h-16 px-6 bg-white">
-          <div id="category-title" className="w-40">
-            <Breadcrumb
-              attributes={[
-                'hierarchicalCategories.lvl0',
-                'hierarchicalCategories.lvl1',
-                'hierarchicalCategories.lvl2',
-              ]}
-            />
-          </div>
-
-          <ProductActions></ProductActions>
-        </div>
 
         <div className="mx-6 my-2" id="products">
           <InfiniteHits hitComponent={Hit} />

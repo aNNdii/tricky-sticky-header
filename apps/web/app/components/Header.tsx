@@ -2,12 +2,16 @@
 
 import { useScrollDirection } from '../hooks/useScrollDirection';
 
+import { DisappearingHeader } from './DisappearingHeader';
+import { ProductHeader } from './ProductHeader';
+
 export function Header() {
+  const scrollDirection = useScrollDirection()
+
   return (
-    <div
-      className={`sticky top-0 h-16 bg-black transition-all duration-500`}
-    >
-      <div className="p-5 font-bold text-white">Disappearing Header</div>
+    <div className={`${scrollDirection === "down" ? '-top-16' : 'top-0'} sticky z-10 transition-[top] duration-500`}>
+      <DisappearingHeader />
+      <ProductHeader />
     </div>
   );
 }
